@@ -33,10 +33,20 @@ class _MyAppState extends State<MyApp> {
         body: Form(
           key: _formKey,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Expanded(flex: 1, child: TextFormField()),
-              Expanded(flex: 1, child: TextFormField()),
-              Expanded(flex: 1, child: TextFormField()),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextFormField(),
+              ),
               Padding(
                 padding: EdgeInsets.all(60),
                 child: ElevatedButton(
