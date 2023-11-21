@@ -12,11 +12,29 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Form(),
+        body: Form(
+          key: _formKey,
+          child: Column(
+            children: <Widget>[
+              Expanded(flex: 1, child: TextFormField()),
+              Expanded(flex: 1, child: TextFormField()),
+              Expanded(flex: 1, child: TextFormField()),
+              Expanded(
+                flex: 1,
+                child: ElevatedButton(
+                  child: Text('Save'),
+                  onPressed: () {},
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
